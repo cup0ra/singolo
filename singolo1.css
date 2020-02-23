@@ -117,8 +117,8 @@ header{
 .logo>span{
   color: #F06C64;
 }
-#home{
-  color:#F06C64;
+.home{
+  color:#F06C64 !important;
 }
 nav a:hover{
   color:#F06C64;
@@ -309,7 +309,7 @@ nav a:hover{
   }
 /* SERVICE */
 
-.services{
+#services{
   display: flex;
   flex-direction: column;
   width: 1020px;
@@ -318,7 +318,7 @@ nav a:hover{
   border-bottom:6px solid #FFFFFF;
 }
 
-.services>h2{
+#services>h2{
   width: 300px;
   height: 23px;
   letter-spacing: 0.0555px;
@@ -330,7 +330,7 @@ nav a:hover{
   margin-top: 69px;
   color: #666D89;
 }
-.services>p{
+#services>p{
   width: 940px;
   height: 47px;
   letter-spacing: 0.05px;
