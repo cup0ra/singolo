@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 90" >
+<defs> 
+<style type="text/css">
+svg path {fill:inherit; stroke:inherit;}
+#Слой_2 { fill: #666d89; stroke:4;  transition: fill 0.2s; }
+#Слой_2:hover  { fill: #3b5998; }
+
+
+  </style>
+  </defs>
+	<title>Ресурс 1</title>
+
+<a href="http://facebook.com" target="_blank">
+<g id="Слой_2" data-name="Слой 2"><g id="All_glyphs" data-name="All glyphs">
+
+
+<path  d="M50,15.65H35.72c-1.69,0-3.58,2.22-3.58,5.19V31.15H50v14.7H32.14V90H15.29V45.85H0V31.15H15.29V22.5C15.29,10.09,23.9,0,35.72,0H50Z"/></g></g>
+</a>
+</svg>
