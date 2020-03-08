@@ -123,7 +123,7 @@ header{
 }
 nav a:hover{
   color:#F06C64;
-  text-decoration: underline;  
+  
 }
 
 /*  SLIDER  */
@@ -493,8 +493,8 @@ nav a:hover{
      cursor: pointer;
    }
    .nav-button button:hover{
-       background: #dedede;
-       color: #2d303a !important;
+       
+       color: #dedede !important;
        border: 1px solid #dedede !important;
        cursor: pointer;
    }
@@ -716,9 +716,10 @@ input[type=text],textarea {
     line-height: 1px !important;
     background: #d6564f;
     border: none;
-    color:#f48c8f;
+    color:#f0d8d9;
     padding: 1px 15px;
     outline:none;
+    border: 1px solid #d6564f;
 }
 textarea{
   padding: 17px 15px;
@@ -740,8 +741,12 @@ input[type=submit]{
     float: right;
     margin-top: -5px;
     padding: 5px;
+    transition: all .5s;
 }
-input[type=submit]{
+input[type=submit]:hover{
+  background: #d6564f;
+  border: 1px solid #f0d8d9;
+  color: #f0d8d9;
   cursor: pointer;
 }
 input:focus,
