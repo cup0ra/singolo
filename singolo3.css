@@ -103,7 +103,7 @@ input[type=text],textarea {
     font-size: 12px;
     line-height: 1px !important;
     background: #d6564f;
-    border: none;
+    border: 1px solid #d6564f;
     color:#f48c8f;
     padding: 1px 15px;
     outline:none;
@@ -128,8 +128,12 @@ input[type=submit]{
     float: right;
     margin-top: -5px;
     padding: 5px;
+    transition: all .5s;
 }
-input[type=submit]{
+input[type=submit]:hover{
+  background: #d6564f;
+  border: 1px solid #f0d8d9;
+  color: #f0d8d9;
   cursor: pointer;
 }
 input:focus,
