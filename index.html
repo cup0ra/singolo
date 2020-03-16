@@ -6,38 +6,61 @@
     <title>SINGOLO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    
  </head>
  <body>
    <div id="wrapper">
    <header id="home">     
       <h1 class="logo">SINGOLO<span>*</span></h1>
       <nav>
-          <ul class="menu">
-              <li ><a class="home" href="#home">HOME</a></li>
-              <li><a href="#services">SERVICES</a></li>
-              <li><a href="#portfolio">PORTFOLIO</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#contact">CONTACT</a></li>
+          <ul class="menu" id="menu">
+              <li><a class="scroll-to active"  href="#home">HOME</a></li>
+              <li><a class="scroll-to" href="#services">SERVICES</a></li>
+              <li><a class="scroll-to" href="#portfolio">PORTFOLIO</a></li>
+              <li><a class="scroll-to" href="#about">ABOUT</a></li>
+              <li><a class="scroll-to" href="#contact">CONTACT</a></li>
           </ul>
       </nav>
    </header>
-   <section class="slider">
-    <div class="slider-container">
-      <div class="chev-left"></div>
-      <div class="chev-right"></div>
-      <div class="iphone-ver">
-            <div class="camera"></div>
-            <div class="speaker"></div>
-            <div class="screen"></div>
-            <div class="button"><div></div></div>
-      </div>
-      <div class="iphone-hor">
-            <div class="camera"></div>
-            <div class="speaker"></div>
-            <div class="screen"></div>
-            <div class="button"><div></div></div>
-      </div>
-    </div>
+   <section id="slider">
+       
+         
+              
+               <div class="slider">
+                <div class="item">
+                  <div class="container-phone">
+                  <div class="iphone-ver" >
+                    <div class="camera"></div>
+                    <div class="speaker"></div>
+                    <div class="screen" id="screen"></div>
+                    <div class="button" id="phone"><div></div></div>
+                  </div>
+                  <div class="iphone-hor" >
+                    <div class="camera"></div>
+                    <div class="speaker"></div>
+                    <div class="screen" id="screen1"></div>
+                    <div class="button" id="phone1"><div></div></div>
+                  </div>
+                </div> 
+                </div>
+            
+                <div class="item">
+                    <img src="assets/image/slide2.jpg" alt="Второй слайд">
+                   
+                </div>
+            
+                
+            
+                <a class="prev" onclick="minusSlide()">&#10094;</a>
+                <a class="next" onclick="plusSlide()">&#10095;</a>
+            </div>
+              
+              
+              
+              
+          
+          
+       
     </section>
     <section id="services">  
       <h2>Our Services</h2>
@@ -93,14 +116,14 @@
     <section id="portfolio">
     <h2>Portfolio</h2>
     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-    <form class="nav-button">
-        <button class="active">All</button>
+    <div class="nav-button" id="nav">
+        <button>All</button>
         <button>Web Design</button>
         <button>Graphic Design</button>
         <button>Artwork</button>
-    </form>
-    <div class="gallery">
-        <figure class="gallery__item gallery__item--1">
+    </div>
+    <div class="gallery" id="gallery">
+        <figure class="gallery__item gallery__item--1" id="gallery__item">
             <img src="assets/image/1.png" class="gallery__img img1" alt="Image 1">
           </figure>
           <figure class="gallery__item gallery__item--2">
@@ -226,13 +249,24 @@
          ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
          <div class="container_form_contact">
         <div class="container-form">
-          <form class="" action="https://www.w3schools.com/action_page.php" method="get" target="_self">
+          <form class="" action="" method="get" target="_self" id="form">
             <input type="text" id="name" name="name" placeholder="Name (Required)" required autocomplete="off">
-            <input type="text" id="Email" name="email" placeholder="Email (Required)"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required autocomplete="off"> 
-            <input type="text" id="Subject" name="subject" placeholder="Subject" autocomplete="off">
-            <textarea id="subject" name="subject" placeholder="Describe your project in detail..." style="height:202px" autocomplete="off"></textarea>
-            <input type="submit" value="Submit">
+            <input type="email" id="Email" name="email" placeholder="Email (Required)"   required autocomplete="off"> 
+            <input type="text" id="subject1" name="subject" placeholder="Subject" autocomplete="off">
+            <textarea id="subject2" name="subject2" placeholder="Describe your project in detail..." style="height:202px" autocomplete="off"></textarea>
+            <input type="submit"  value="Submit" id="btn">
          </form>
+              <div id="message-block" class="hidden">
+                  <div id="message" >
+                    <h3>message sent</h3>
+                    <p id="topic">Subject: <span id="result1"></span></p>
+                    <p id="not-topic" class="hidden">No subject</p>
+                    <p id="description">Description: <span id="result2"></span></p>
+                    <p id="not-description" class="hidden">No description</p>
+                    <br>
+                    <button id="close-button">OK</button>
+                  </div>
+              </div>
         </div>
         <div class="contact-info">
             <h3>Contact Information</h3>
@@ -267,5 +301,7 @@
       </div>
     </footer>
     </div>
+
+    <script src="script.js"></script>
    </body>
  </html>
