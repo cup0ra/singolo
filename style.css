@@ -34,6 +34,9 @@ ul[class],
 ol[class] {
   list-style:none;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   width: 100%;
@@ -57,7 +60,10 @@ header{
   width: 1020px;
   height: 95px;
   background: #2D303A;
-  border-bottom: 6px solid  #323746;  
+  border-bottom: 6px solid  #323746; 
+  position: sticky; 
+  top:0;
+  z-index: 10000;
   }
  
 
@@ -128,12 +134,18 @@ nav a:hover{
 
 /*  SLIDER  */
 
-#slider{
+#home{
   width: 1020px;
-  height: 600px;
+  height: 695px;
   border-bottom: 6px solid #ea676b;
-  
+ 
   background: #f06c64;
+  padding-top: 95px;
+	margin-top: -95px;
+	-webkit-background-clip: content-box;
+  background-clip: content-box;
+  text-align: center;
+ 
 }
 
 .slider{
@@ -141,47 +153,98 @@ nav a:hover{
   position: relative;
   height: 600px;
   margin: auto;
+  overflow: hidden;
+  
+}
+.item {
+  display: none;
+  position: relative;
+  animation: 0.5s ease-in-out;
+  margin: 0 auto;
+}
+.active-slide,
+.next {
+  display: block;
+}
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
+.left {
+  left: 0;
+  left: auto;
+}
 
+.right {
+  right: 0;
+  left: auto;
+}
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 49%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
+}
+.arrow:hover{
+  color: black;
+}
+
+.arrow.right {
+  right: 4%;
+}
+.arrow.left{
+  left: 4%;
+}
 .item >img {
   object-fit: cover;
   width: 100%;
   height: 594px;
 }
+.to-left {
+  animation-name: left;
+}
 
+.from-right {
+  animation-name: right;
+}
 
-.slider .prev, .slider .next {
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  width: auto;
-  margin-top: 0px;
-  margin-left: 41px;
-  color: rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  font-size: 35px;
-  transition: 0.6s ease;
-  
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
 }
 
 
-.slider .next {
- right: 40px;
-  border-radius: 3px 0 0 3px;
-}
 
-.slider .prev:hover,
-.slider .next:hover {
-  color:black;
-}
 
-.slider >.item__slider {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+
 
 
 
@@ -339,9 +402,13 @@ nav a:hover{
   display: flex;
   flex-direction: column;
   width: 1020px;
-  height: 500px;
+  height: 595px;
   background: #F2F2F2;
   border-bottom:6px solid #FFFFFF;
+  padding-top: 95px;
+	margin-top: -95px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
 }
 
 #services>h2{
@@ -454,9 +521,13 @@ nav a:hover{
 /* PORTFOLIO*/
 #portfolio{
     width: 100%;
-    height: 869px;
+    height: 964px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
+    padding-top: 95px;
+	margin-top: -95px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
    }
    #portfolio>h2{
        color: #666d89;
@@ -527,15 +598,16 @@ nav a:hover{
    }
    
    .gallery {
-    width: 940px;
+    width: 950px;
     height: 610px;
     margin:auto;
-    margin-top: 19px;
+    margin-top: 14px;
     display: grid;
     grid-template-columns: repeat(4, 220px);
     grid-template-rows: repeat(3, 187px);
     grid-gap: 20px ;
     overflow: hidden;
+    padding: 5px;
      
    }
    
@@ -557,15 +629,21 @@ nav a:hover{
      object-position:-2px  ;
    }
    .active_img{
-     border: 5px solid #F06C64 ;
+     outline: 5px solid #F06C64 ;
+    
    }
    /* ABOUT */
    #about{
     width: 100%;
-    height: 734px;
+    height: 829px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
     color:  #767e9e;
+    padding-top: 95px;
+    margin-top: -95px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+
    }
    #about>h2{
        color: #666d89;
@@ -694,10 +772,14 @@ nav a:hover{
    /* GET A QUOT  */
    .get{
     width: 100%;
-    height: 654px;
+    height: 749px;
     background: #f06c64;
    color:#f0d8d9;
     border-bottom: 6px solid #ea676b;
+    padding-top: 95px;
+    margin-top: -95px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
 }
 .get>h2{
     color: #f0d8d9;
