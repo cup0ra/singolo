@@ -10,7 +10,7 @@
  </head>
  <body>
    <div id="wrapper">
-   <header id="home">     
+   <header >     
       <h1 class="logo">SINGOLO<span>*</span></h1>
       <nav>
           <ul class="menu" id="menu">
@@ -22,12 +22,12 @@
           </ul>
       </nav>
    </header>
-   <section id="slider">
+   <section id="home" >
        
          
-              
-               <div class="slider">
-                <div class="item">
+            <div class="carousel">
+               <div class="slider"  >
+                <div class="item active-slide">
                   <div class="container-phone">
                   <div class="iphone-ver" >
                     <div class="camera"></div>
@@ -51,15 +51,19 @@
             
                 
             
-                <a class="prev" onclick="minusSlide()">&#10094;</a>
-                <a class="next" onclick="plusSlide()">&#10095;</a>
-            </div>
               
+            
+                <div class="control left">
+                  <div class="arrow left">&#10094;</div>
+                </div>
+                <div class="control right">
+                  <div class="arrow right">&#10095;</div>
+                </div>
               
               
               
           
-          
+          </div>   
        
     </section>
     <section id="services">  
@@ -159,9 +163,7 @@
           <figure class="gallery__item gallery__item--12">
             <img src="assets/image/12.png" class="gallery__img" alt="Image 12">
           </figure>
-          <figure class="gallery__item gallery__item--13">
-            <img src="assets/image/12.png" class="gallery__img" alt="Image 13">
-          </figure>
+         
     </div>
     
     </section>
@@ -258,11 +260,11 @@
          </form>
               <div id="message-block" class="hidden">
                   <div id="message" >
-                    <h3>message sent</h3>
+                    <h3>The letter was sent </h3>
                     <p id="topic">Subject: <span id="result1"></span></p>
-                    <p id="not-topic" class="hidden">No subject</p>
+                    <p id="not-topic" class="hidden">Without subject</p>
                     <p id="description">Description: <span id="result2"></span></p>
-                    <p id="not-description" class="hidden">No description</p>
+                    <p id="not-description" class="hidden">Without description</p>
                     <br>
                     <button id="close-button">OK</button>
                   </div>
