@@ -252,14 +252,6 @@ nav a:hover{
   }
 }
 
-
-
-
-
-
-
-
-
 .container-phone{
  width: 100%;
   height: 594px;
@@ -268,10 +260,6 @@ nav a:hover{
   position: relative;
   background: #f06c64;
 }
-
-
-
-
 
 .iphone-ver{
   width: 215px;
@@ -1594,15 +1582,15 @@ input[type=submit]{
   .hamburger-menu{
     display:block;
   }
-  /* скрываем чекбокс */
+
 #menu__toggle {
   opacity: 0;
   
 }
-/* стилизуем кнопку */
+
 .menu__btn {
-  display: flex; /* используем flex для центрирования содержимого */
-  align-items: center;  /* центрируем содержимое кнопки */
+  display: flex; 
+  align-items: center; 
   position: fixed;
   top: 23px;
   left: 19px;
@@ -1611,7 +1599,7 @@ input[type=submit]{
   cursor: pointer;
   z-index: 1;
 }
-/* добавляем "гамбургер" */
+
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -1646,7 +1634,7 @@ input[type=submit]{
   left: -100%;
   width: 278px;
   height: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding:  0;
   list-style: none;
   text-align: left;
@@ -2077,7 +2065,7 @@ header{
 }
 .menu li:before {
   left: -18px;
-  top: 5px;
+  top: 4px;
   }
 #services,
 #about{
