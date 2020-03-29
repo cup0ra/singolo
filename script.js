@@ -35,97 +35,18 @@ function previousItem(n) {
 	changeCurrentItem(n - 1);
 	showItem('from-left');
 }
+document.querySelector('.control.left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
 
+document.querySelector('.control.right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
+});
 
-/* SWIPER */
-const swipedetect = (el) => {
-  
-	let surface = el;
-	let startX = 0;
-	let startY = 0;
-	let distX = 0;
-	let distY = 0;
-	let startTime = 0;
-	let elapsedTime = 0;
-
-	let threshold = 150;
-	let restraint = 100;
-	let allowedTime = 300;
-
-	surface.addEventListener('mousedown', function(e){
-		startX = e.pageX;
-		startY = e.pageY;
-		startTime = new Date().getTime();
-		e.preventDefault();
-	}, false);
-
-	surface.addEventListener('mouseup', function(e){
-		distX = e.pageX - startX;
-		distY = e.pageY - startY;
-		elapsedTime = new Date().getTime() - startTime;
-		if (elapsedTime <= allowedTime){
-			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-				if ((distX > 0)) {
-					if (isEnabled) {
-						previousItem(currentItem);
-					}
-				} else {
-					if (isEnabled) {
-						nextItem(currentItem);
-					}
-				}
-			}
-		}
-		e.preventDefault();
-	}, false);
-
-	surface.addEventListener('touchstart', function(e){
-		if (e.target.classList.contains('arrow') || e.target.classList.contains('control')) {
-			if (e.target.classList.contains('left')) {
-				if (isEnabled) {
-					previousItem(currentItem);
-				}
-			} else {
-				if (isEnabled) {
-					nextItem(currentItem);
-				}
-			}
-		}
-			var touchobj = e.changedTouches[0];
-			startX = touchobj.pageX;
-			startY = touchobj.pageY;
-			startTime = new Date().getTime();
-			e.preventDefault();
-	}, false);
-
-	surface.addEventListener('touchmove', function(e){
-			e.preventDefault();
-	}, false);
-
-	surface.addEventListener('touchend', function(e){
-			var touchobj = e.changedTouches[0];
-			distX = touchobj.pageX - startX;
-			distY = touchobj.pageY - startY;
-			elapsedTime = new Date().getTime() - startTime;
-			if (elapsedTime <= allowedTime){
-					if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
-							if ((distX > 0)) {
-								if (isEnabled) {
-									previousItem(currentItem);
-								}
-							} else {
-								if (isEnabled) {
-									nextItem(currentItem);
-								}
-							}
-					}
-			}
-			e.preventDefault();
-	}, false);
-}
-
-var el = document.querySelector('.carousel');
-swipedetect(el);
 
 /* phone screen */
 const PHONE = document.getElementById('phone');
@@ -140,13 +61,7 @@ PHONE1.addEventListener('click',(event) => {
 
 /* MENU  */
 const MENU = document.getElementById('menu');
-MENU.addEventListener('click',(event) => {
-  if (event.target.tagName == 'A'){ 
-    MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-	event.target.classList.add('active');
-	
-  }
-});
+
 
 const MENU__toggle = document.getElementById('menu__toggle');
 MENU__toggle.addEventListener('click',(event) => {

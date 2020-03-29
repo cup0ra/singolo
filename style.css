@@ -1094,7 +1094,7 @@ display: none;
     border:1px solid #767e9e;
     margin-right: 10px;
    
-    max-height: 22px;
+    max-height: 18px;
 
     padding-top: 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -1662,7 +1662,7 @@ input[type=submit]{
   margin-left: 71px !important;
 }
 .menu li:nth-child(1){
-  margin-top:50%;
+  margin-top:83.5%;
 }
 .menu li:before {
   content: "";
@@ -2084,6 +2084,17 @@ header{
  border: none;
 
 }
+#home,
+#contact,
+#portfolio,
+#services,
+#about{
+  
+  padding-top: 90px;
+margin-top: -90px;
+-webkit-background-clip: content-box;
+background-clip: content-box;
+}
     .container-phone{
       width: 100%;
       
@@ -2313,4 +2324,13 @@ header{
     transform: translate(-50%, -50%);
   }
   }
-  @media not all and (hover: hover) {}
+  @media not all and (hover: hover) {
+    nav a:hover{
+      color:#fff;
+      
+    }
+    
+.arrow:hover{
+  color:rgba(0, 0, 0, 0.3);
+}
+  }
