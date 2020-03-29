@@ -9,10 +9,16 @@
     
  </head>
  <body>
+  
    <div id="wrapper">
-   <header >     
-      <h1 class="logo">SINGOLO<span>*</span></h1>
+   <header >  
+      <h1 class="logo" id="logo">SINGOLO<span>*</span></h1>
       <nav>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>   
           <ul class="menu" id="menu">
               <li><a class="scroll-to active"  href="#home">HOME</a></li>
               <li><a class="scroll-to" href="#services">SERVICES</a></li>
@@ -20,11 +26,12 @@
               <li><a class="scroll-to" href="#about">ABOUT</a></li>
               <li><a class="scroll-to" href="#contact">CONTACT</a></li>
           </ul>
+        </div>
       </nav>
+    
    </header>
+   <div id="menu-block" class="hidden"></div>
    <section id="home" >
-       
-         
             <div class="carousel">
                <div class="slider"  >
                 <div class="item active-slide">
@@ -43,26 +50,15 @@
                   </div>
                 </div> 
                 </div>
-            
                 <div class="item">
                     <img src="assets/image/slide2.jpg" alt="Второй слайд">
-                   
                 </div>
-            
-                
-            
-              
-            
                 <div class="control left">
                   <div class="arrow left">&#10094;</div>
                 </div>
                 <div class="control right">
                   <div class="arrow right">&#10095;</div>
                 </div>
-              
-              
-              
-          
           </div>   
        
     </section>
@@ -121,10 +117,10 @@
     <h2>Portfolio</h2>
     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     <div class="nav-button" id="nav">
-        <button>All</button>
-        <button>Web Design</button>
-        <button>Graphic Design</button>
-        <button>Artwork</button>
+        <button class="btn">All</button>
+        <button class="btn">Web Design</button>
+        <button class="btn">Graphic Design</button>
+        <button class="btn">Artwork</button>
     </div>
     <div class="gallery" id="gallery">
         <figure class="gallery__item gallery__item--1" id="gallery__item">
@@ -172,7 +168,7 @@
     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="staff">
             <div class="staff__item staff__1st">
-              <figure  class="photo"><img src="assets/image/staff1.png" width="302" height="300" alt="photo1"> </figure>
+              <figure  class="photo"><img src="assets/image/staff1.png" width="100%" height="100%" alt="photo1"> </figure>
                 <h3>Adam Jensen</h3>
                 <p>Quisque luctus, quam eget molestie commodo,lacus purus
                    cursus purus, nec rutrum tellus dolor id lorem.</p>
@@ -196,7 +192,7 @@
                    </div>
             </div>
             <div class="staff__item staff__2nd">
-              <figure  class="photo"><img src="assets/image/photo2.png"  width="303" height="300" alt="photo2"> </figure>
+              <figure  class="photo"><img src="assets/image/photo2.png"  width="100%" height="100%" alt="photo2"> </figure>
                 <h3>Desmond Miles</h3>
                 <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus 
                    in quam laoreet, viverra lacus ut, ultrices velit.</p>
@@ -220,7 +216,7 @@
                  </div>
             </div>
             <div class="staff__item staff__3rd">
-              <figure  class="photo"><img src="assets/image/photo3.png"   width="303" height="300" alt="photo3"> </figure>
+              <figure  class="photo"><img src="assets/image/photo3.png"   width="100%" height="100%" alt="photo3"> </figure>
                 <h3>Scolara Visari </h3>
                 <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
                    turpis, et consequat felis. Quisque condimentum.</p>
@@ -247,7 +243,7 @@
     </section>
     <section id='contact' class="get">
     <h2>Get a Quote</h2>
-    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor <br>
+    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor 
          ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
          <div class="container_form_contact">
         <div class="container-form">
@@ -256,7 +252,7 @@
             <input type="email" id="Email" name="email" placeholder="Email (Required)"   required autocomplete="off"> 
             <input type="text" id="subject1" name="subject" placeholder="Subject" autocomplete="off">
             <textarea id="subject2" name="subject2" placeholder="Describe your project in detail..." style="height:202px" autocomplete="off"></textarea>
-            <input type="submit"  value="Submit" id="btn">
+            <input type="submit"  value="SEND" id="btn">
          </form>
               <div id="message-block" class="hidden">
                   <div id="message" >
@@ -302,6 +298,7 @@
         </div>
       </div>
     </footer>
+    
     </div>
 
     <script src="script.js"></script>
