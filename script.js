@@ -90,7 +90,7 @@ CLOSE_burger.addEventListener('click',(event) =>{
 document.addEventListener('scroll', onScroll);
 
 function onScroll(event){
-  const curPos = window.scrollY;
+  const curPos = window.scrollY + 2;
   const sections = document.querySelectorAll('#wrapper>section');
   const links = document.querySelectorAll('#menu a');
 
